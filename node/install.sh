@@ -101,7 +101,7 @@ fi
 
 
 # File Download URLs
-GH_REPO_URL="https://media.githubusercontent.com/media/gatechain/node-binary/master/node/mainnet/1.0.3-hotfix"
+GH_REPO_URL="https://media.githubusercontent.com/media/gatechain/node-binary/master/node/mainnet/1.0.3"
 CLI_FILENAME="gatecli"
 
 # Download  Mainnet CLI
@@ -122,7 +122,7 @@ FULLNODE_BINARY_URL="$GH_REPO_URL/$DETECTED_OS/$NODE_FILENAME"
     wget -q --show-progress "$FULLNODE_BINARY_URL"
     chmod 755 "./$NODE_FILENAME"
 
-FULLNODE_CONFIG_URL="https://raw.githubusercontent.com/gatechain/node-binary/master/node/mainnet/1.0.3-hotfix/config"
+FULLNODE_CONFIG_URL="https://raw.githubusercontent.com/gatechain/node-binary/master/node/mainnet/1.0.3/config"
 
 cd $GATECHAIN_FULLNODE_DIR
 echo "... Downloading config files for full node"
