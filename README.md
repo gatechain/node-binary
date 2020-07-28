@@ -1,8 +1,8 @@
-#GateChain Client
+# GateChain Client
 
 GateChain is a novel next-generation public blockchain, focused on onchain asset safety and decentralized exchange. 
 
-##Installation Script
+## Installation Script
 We have a installer script (install.sh) that takes care of chain directory setup. This uses the following defaults:
 
 * Home folder in ~/.gated
@@ -13,7 +13,7 @@ We have a installer script (install.sh) that takes care of chain directory setup
 sh <(wget -qO- https://raw.githubusercontent.com/gatechain/node_binary/master/node/install.sh)
 ```
 
-##Manual Installation
+## Manual Installation
 We use the repository to store historical versions of the compiled node binary file for the time being. Please follow the docs:
 
 [EN](https://www.gatechain.io/docs/en/gatechain-build.html)
