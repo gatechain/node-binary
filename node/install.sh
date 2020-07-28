@@ -102,12 +102,12 @@ fi
 
 
 # File Download URLs
-GH_REPO_URL="https://media.githubusercontent.com/media/gatechain/node-binary/master/node/mainnet/1.0.3-hotfix/$DETECTED_OS"
+GH_REPO_URL="https://media.githubusercontent.com/media/gatechain/node-binary/master/node/mainnet/1.0.3-hotfix"
 CLI_FILENAME="gatecli"
 
 # Download  Mainnet CLI
  
-  CLI_BINARY_URL="$GH_REPO_URL/$CLI_FILENAME"
+  CLI_BINARY_URL="$GH_REPO_URL/$DETECTED_OS/$CLI_FILENAME"
     cd $USR_LOCAL_BIN
     echo "... Downloading" $CLI_FILENAME 
     wget -q --show-progress "$CLI_BINARY_URL"
@@ -117,7 +117,7 @@ CLI_FILENAME="gatecli"
 
 # Download Full Node
 NODE_FILENAME="gated"
-FULLNODE_BINARY_URL="$GH_REPO_URL/$NODE_FILENAME"
+FULLNODE_BINARY_URL="$GH_REPO_URL/$DETECTED_OS/$NODE_FILENAME"
     cd $USR_LOCAL_BIN
     echo "... Downloading" $NODE_FILENAME 
     wget -q --show-progress "$FULLNODE_BINARY_URL"
