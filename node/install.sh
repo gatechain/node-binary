@@ -20,8 +20,7 @@ elif [[ "$OSTYPE" == "cygwin" ]]; then
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
   DETECTED_OS="linux"
 else
-  FULLNODE_echo "Error: unable to detect operating system. Please install manually by referring to $DOCS_WEB_LINK"
-  LIGHTNODE_DOCS_WEB_LINK=""
+  echo "Error: unable to detect operating system. Please install manually by referring to $DOCS_WEB_LINK"
   exit 1
 fi
 
@@ -123,7 +122,7 @@ FULLNODE_BINARY_URL="$GH_REPO_URL/$DETECTED_OS/$NODE_FILENAME"
     wget -q --show-progress "$FULLNODE_BINARY_URL"
     chmod 755 "./$NODE_FILENAME"
 
-FULLNODE_CONFIG_URL="$GH_REPO_URL/$GH_REPO_URL/config"
+FULLNODE_CONFIG_URL="https://raw.githubusercontent.com/gatechain/node-binary/master/node/mainnet/1.0.3-hotfix/config"
 
 cd $GATECHAIN_FULLNODE_DIR
 echo "... Downloading config files for full node"

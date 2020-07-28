@@ -10,7 +10,7 @@ We have a installer script (install.sh) that takes care of chain directory setup
 
 ```cassandraql
 # One-line install
-sh <(wget -qO- https://raw.githubusercontent.com/gatechain/node-binary/master/node/install.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/gatechain/node-binary/master/node/install.sh)
 ```
 
 ## Manual Installation
