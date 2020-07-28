@@ -102,7 +102,7 @@ fi
 
 
 # File Download URLs
-GH_REPO_URL="https://github.com/gatechain/node_binary/tree/master/node/mainnet/1.0.3-hotfix/$DETECTED_OS"
+GH_REPO_URL="https://github.com/gatechain/node-binary/tree/master/node/mainnet/1.0.3-hotfix/$DETECTED_OS"
 CLI_FILENAME="gatecli"
 
 # Download  Mainnet CLI
