@@ -61,7 +61,6 @@
 	"LastPartKeyRound": 300000000,
 	"RefreshPartInterval": 2,
 	"MinimumTxFee": 10,
-	"MaxPartKeyNum": 10,
 	"SenderInfo": 1
 }
 
