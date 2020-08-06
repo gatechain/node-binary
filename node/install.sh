@@ -33,6 +33,8 @@ if [ ! -x /usr/bin/wget ]; then
   }
 fi
 
+BIN_VERSION=1.0.4
+
 echo "@@@@@@@@@@@@@@@@@@@ @@@@@@@@@@@@@@@@@@@"
 echo "@@@@@@@@@@@@@@@@@     @@@@@@@@@@@@@@@@@"
 echo "@@@@@@@@@@@@@@@         @@@@@@@@@@@@@@@"
@@ -55,7 +57,7 @@ echo "@@@@@@@@@@@@@@@@@     @@@@@@@@@@@@@@@@@"
 echo ""
 
 echo "========== Gate Chain Node Installation =========="
-echo "Installer Version: v1.0.3"
+echo "Installer Version: v${BIN_VERSION}"
 echo "Detected OS: $DETECTED_OS"
 echo "====================================================="
 
@@ -101,7 +103,7 @@ fi
 
 
 # File Download URLs
-GH_REPO_URL="https://media.githubusercontent.com/media/gatechain/node-binary/master/node/mainnet/1.0.3"
+GH_REPO_URL="https://media.githubusercontent.com/media/gatechain/node-binary/master/node/mainnet/${BIN_VERSION}"
 CLI_FILENAME="gatecli"
 
 # Download  Mainnet CLI
@@ -122,7 +124,7 @@ FULLNODE_BINARY_URL="$GH_REPO_URL/$DETECTED_OS/$NODE_FILENAME"
     wget -q --show-progress "$FULLNODE_BINARY_URL"
     chmod 755 "./$NODE_FILENAME"
 
-FULLNODE_CONFIG_URL="https://raw.githubusercontent.com/gatechain/node-binary/master/node/mainnet/1.0.3/config"
+FULLNODE_CONFIG_URL="https://raw.githubusercontent.com/gatechain/node-binary/master/node/mainnet/${BIN_VERSION}/config"
 
 cd $GATECHAIN_FULLNODE_DIR
 echo "... Downloading config files for full node"
