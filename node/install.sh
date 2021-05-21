@@ -33,7 +33,7 @@ if [ ! -x /usr/bin/wget ]; then
   }
 fi
 
-BIN_VERSION=1.0.7
+BIN_VERSION=1.0.8
 
 
 echo "========== Gate Chain Node Installation =========="
