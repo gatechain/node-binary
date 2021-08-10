@@ -60,22 +60,18 @@ GATE_CLI_DIR=${GATE_CLI_DIR:-"$HOME/.gatecli"}
 # Detect previous installation and create .gated folder,
 echo "... creating $GATECHAIN_FULLNODE_DIR"
 if [ -d "$GATECHAIN_FULLNODE_DIR" ]; then
-  echo "... Error: GateChain Fullnode has already been installed"
-  echo "... Error: Please remove contents of ${GATECHAIN_FULLNODE_DIR} before reinstalling."
-  exit 1
+  echo "... Warn: GateChain Fullnode has already been installed "
 else
   mkdir -p $GATECHAIN_FULLNODE_DIR
   cd $GATECHAIN_FULLNODE_DIR
 fi
 if [ -f "$USR_LOCAL_BIN/gated" ]; then
-  echo "... Error: Gate Chain Fullnode has already been installed"
-  echo "... Error: Please remove gated from /usr/local/bin before reinstalling."
-  exit 1
+  echo "... Warn: Gate Chain Fullnode has already been installed"
+  echo "... Warn: The old version exists ,you need to remove it and use the latest version instead of it"
 fi
 if [ -f "$USR_LOCAL_BIN/gatecli" ]; then
-  echo "... Error: Gate Chain CLI Mainnet has already been installed"
-  echo "... Error: Please remove gatecli from /usr/local/bin before reinstalling."
-  exit 1
+  echo "... Warn: Gate Chain CLI Mainnet has already been installed"
+  echo "... Warn: The old version exists ,you need to remove it and use the latest version instead of it"
 fi
 
 # Version selection options
