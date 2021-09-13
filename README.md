@@ -16,6 +16,6 @@ bash <(wget -qO- https://raw.githubusercontent.com/gatechain/node-binary/master/
 ## Manual Installation
 We use the repository to store historical versions of the compiled node binary file for the time being. Please follow the docs:
 
-[EN](https://www.gatechain.io/docs/en/gatechain-build.html)
+[EN](http://docs.gatechain.io/en/developers/gatechain-build/)
 
-[中文](https://www.gatechain.io/docs/cn/gatechain-build.html)
+[中文](http://docs.gatechain.io/developers/gatechain-build/)
