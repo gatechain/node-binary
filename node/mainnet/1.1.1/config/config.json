@@ -44,7 +44,7 @@
 	"OutgoingMessageFilterBucketSize": 128,
 	"EnableOutgoingNetworkMessageFiltering": true,
 	"EnableIncomingMessageFilter": false,
-	"DeadlockDetection": 0,
+	"DeadlockDetection": -1,
 	"RunHosted": false,
 	"CatchupParallelBlocks": 20,
 	"EnableAssembleStats": false,
