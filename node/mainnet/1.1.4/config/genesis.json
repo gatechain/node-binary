@@ -1,0 +1,112 @@
+{
+  "alloc": [
+    {
+      "addr": "AAAAAAAAAAAAAI627CXSJUONN4Q7WF4TH4PX7UZK6U3NORHHZFRTPAYIOCH2PBIRSUFLVLQBTMRJIMOWRDIQ",
+      "comment": "gt11y0d03tey68xk7g0mz7fn78ml6v402dkhgnnujcehsvy8pra8s5ge2z464cqekg55l9qduj",
+      "state": {
+        "autoStatus": 1,
+        "onl": 1,
+        "power": 300000000,
+        "sel": "o8FaRH4bELPS941l1C0Op9t/oep5vj03uKFx2HkosO0=",
+        "vote": "rHN+2y653/4QmO7FRSb1T5pfsfmeDdxpEm3ft67pOvE=",
+        "voteKD": 100
+      }
+    }
+  ],
+  "app_state": {"staking":{"params":{"undelegating_time":"1814400000000000","max_con-accounts":100,"max_entries":7,"bond_denom":"NANOGT","pow_rate":1,"max_pow_rate":2,"reward_uint_gt":18},"last_total_power":"0","last_validator_powers":null,"validators":[{"operator_address":"gt11y0d03tey68xk7g0mz7fn78ml6v402dkhgnnujcehsvy8pra8s5ge2z464cqekg55l9qduj","consensus_pubkey":"gt1pub1u8s6p73qjpjjtlv0tzkaat8yq4vk42zlmvuszjmlwtvwwu6ey0vmt6r6yq6sj9yxes","jailed":false,"status":0,"tokens":"0","power_rate":"1.000000000000000000","delegator_shares":"0.000000000000000000","description":{"moniker":"","identity":"","website":"","details":""},"undelegating_height":"0","undelegating_time":"1970-01-01T00:00:00Z","commission":{"commission_rates":{"rate":"0.000000000000000000","max_rate":"0.000000000000000000","max_change_rate":"0.000000000000000000"},"update_time":"1970-01-01T00:00:00Z"}}],"delegations":null,"unbonding_delegations":null,"redelegations":null,"exported":false},"distribution":{
+    "fee_pool": {
+      "community_pool": []
+    },
+    "community_tax": "0.000000000000000000",
+    "first_committee_reward": "0.360000000000000000",
+    "second_committee_reward": "0.330000000000000000",
+    "third_committee_reward": "0.310000000000000000",
+    "withdraw_addr_enabled": true,
+    "delegator_withdraw_infos": [],
+    "previous_proposer": "",
+    "outstanding_rewards": [],
+    "validator_accumulated_commissions": [],
+    "validator_historical_rewards": [],
+    "validator_current_rewards": [],
+    "delegator_starting_infos": [],
+    "validator_slash_events": []
+  },"supply":{
+    "supply": []
+  },"revocable":{
+    "params": {
+      "max_security_account_bind_count": "5",
+      "max_clear_vault_count": "5"
+    },
+    "txs": []
+  },"crisis":{
+    "constant_fee": {
+      "denom": "NANOGT",
+      "amount": "1000"
+    }
+  },"token":{
+    "tokens": [],
+    "trading_lists": [],
+    "params": {
+      "issue_token_cost_gas": "200000000000",
+      "create_trading_cost": "400000000000"
+    }
+  },"foundation":{
+    "members": [
+      {
+        "address":"gt119y6txds9ctanhkcwaecknyhyl5fk4yesvw8lh2687s2nxutunql446qxn3tqw3p59m5eqh",
+        "proportion":"1"
+      }
+    ],
+    "params": {
+      "total_reward": [
+        {
+          "denom": "NANOGT",
+          "amount": "20000000000000000"
+        }
+      ],
+      "max_release_height": "15000000",
+      "max_members": "20"
+    }
+  },"params":null,"dex":{"owner":"gt11nghngvw3vfkfpxwn4df9wfg4s26tp8jmacc36j4swe4dg4n09sawcwyla3xyzvy65rz6sn"},"auth":{
+    "params": {
+      "max_memo_characters": "256",
+      "tx_sig_limit": "7",
+      "tx_size_cost_per_byte": "10",
+      "sig_verify_cost_ed25519": "590",
+      "sig_verify_cost_secp256k1": "1000"
+    }
+  },"mint":{
+    "minter": {
+      "inflation": "0.130000000000000000",
+      "annual_provisions": "0.000000000000000000"
+    },
+    "params": {
+      "mint_denom": "NANOGT",
+      "inflation_rate_change": "0.130000000000000000",
+      "inflation_max": "0.200000000000000000",
+      "inflation_min": "0.070000000000000000",
+      "goal_bonded": "0.670000000000000000",
+      "blocks_per_year": "6311520"
+    }
+  },"slashing":{
+    "params": {
+      "max_evidence_age": "120000000000",
+      "signed_blocks_window": "100",
+      "min_signed_per_window": "0.500000000000000000",
+      "downtime_jail_duration": "600000000000",
+      "slash_fraction_double_sign": "0.050000000000000000",
+      "slash_fraction_downtime": "0.010000000000000000",
+      "slashing_rate": "0.100000000000000000"
+    },
+    "signing_infos": {},
+    "missed_blocks": {}
+  },"bank":{
+    "send_enabled": true
+  },"accounts":[{"address":"gt11y0d03tey68xk7g0mz7fn78ml6v402dkhgnnujcehsvy8pra8s5ge2z464cqekg55l9qduj","coins":[{"denom":"NANOGT","amount":"300000000000000000"}],"sequence_number":"0","account_number":"0","original_vesting":[],"delegated_free":[],"delegated_vesting":[],"start_time":"0","end_time":"0","module_name":"","module_permissions":[],"clearing_height":{"last_clearing_height":"0","last_clearing_effect_height":"0","next_clearing_height":"0","next_clearing_effect_height":"0"},"delay_height":"0","received_revocable_tokens":null,"vault_address":null,"security_address":"","sent_revocable_tokens":null}],"genutil":{
+    "gentxs": null
+  }},
+  "chain_id": "mainnet",
+  "network": "mainnet",
+  "proto": "v1"
+}
+
