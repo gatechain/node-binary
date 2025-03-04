@@ -19,13 +19,13 @@ You can also run GateChain node using Docker. We provide official Docker images 
 ```bash
 # Pull the latest GateChain node image
 docker pull ghcr.io/gatechain/node-binary/gatechain:latest
-
+```
 
 
 ## Manual Installation
 We use the repository to store historical versions of the compiled node binary file for the time being. 
-# Please follow the docs:
+<!-- Please follow the docs: -->
 
-# [EN](http://docs.gatechain.io/en/developers/gatechain-build/)
+<!-- [EN](http://docs.gatechain.io/en/developers/gatechain-build/)
 
-# [中文](http://docs.gatechain.io/developers/gatechain-build/) -->
+[中文](http://docs.gatechain.io/developers/gatechain-build/)  -->
