@@ -1,0 +1,84 @@
+services:
+  gatelayer-geth:
+    image: ${REGISTRY:-ghcr.io/}${DOCKER_USER}/geth:${TAG:-latest}
+    platform: ${DOCKER_PLATFORM}
+    container_name: gatelayer-geth-rpc
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+      - "8551:8551"
+    volumes:
+      - ${GATELAYER_WORKSPACE:-/tmp/gatelayer}/datadir:/datadir
+      - ${GATELAYER_WORKSPACE:-/tmp/gatelayer}/jwt.txt:/jwt.txt
+      - ${GATELAYER_WORKSPACE:-/tmp/gatelayer}/genesis.json:/genesis.json
+    command: >
+      --datadir /datadir
+      --http
+      --http.corsdomain="*"
+      --http.vhosts="*"
+      --http.addr=0.0.0.0
+      --http.api=web3,eth,txpool,net,engine,miner
+      --ws
+      --ws.addr=0.0.0.0
+      --ws.port=8546
+      --ws.origins="*"
+      --ws.api=eth,txpool,net,engine,miner
+      --syncmode=full
+      --gcmode=archive
+      --nodiscover
+      --maxpeers=0
+      --networkid=${L2_CHAIN_ID:-10088}
+      --authrpc.vhosts="*"
+      --authrpc.addr=0.0.0.0
+      --authrpc.port=8551
+      --authrpc.jwtsecret=/jwt.txt
+      --rollup.sequencerhttp=${SEQUENCER_HTTP_URL}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "geth", "attach", "--exec", "eth.blockNumber", "--datadir", "/datadir"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  gatelayer-node:
+    image: ${REGISTRY:-ghcr.io/}${DOCKER_USER}/node:${TAG:-latest}
+    platform: ${DOCKER_PLATFORM}
+    container_name: gatelayer-node-rpc
+    ports:
+      - "9546:9546"
+    volumes:
+      - ${GATELAYER_WORKSPACE:-/tmp/gatelayer}/rollup.json:/rollup.json
+      - ${GATELAYER_WORKSPACE:-/tmp/gatelayer}/jwt.txt:/jwt.txt
+    environment:
+      - L1_RPC_URL=${L1_RPC_URL}
+      - L1_BEACON_URL=${L1_BEACON_URL}
+    depends_on:
+      gatelayer-geth:
+        condition: service_healthy
+    command: >
+      op-node
+      --l2=http://gatelayer-geth:8551
+      --l2.jwt-secret=/jwt.txt
+      --sequencer.l1-confs=0
+      --verifier.l1-confs=0
+      --rollup.config=/rollup.json
+      --rpc.addr=0.0.0.0
+      --rpc.port=9546
+      --l1=${L1_RPC_URL}
+      --l1.trustrpc=true
+      --l1.rpckind=basic
+      --l1.epoch-poll-interval=10s
+      --log.level=debug
+      --l1.beacon.ignore=false
+      --l1.beacon=${L1_BEACON_URL}
+      --l1.beacon.fetch-all-sidecars=true
+      --p2p.sync.onlyreqtostatic=true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:9546/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
